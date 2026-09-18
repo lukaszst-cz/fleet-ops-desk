@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fleet Ops Desk — demo</title>
+<style>
+:root{--ink:#172235;--muted:#65728a;--line:#dce3ee;--paper:#f5f7fb;--accent:#0969da;--green:#0f8c61;--orange:#c56a12}
+*{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--paper);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}
+.topbar{display:flex;justify-content:space-between;gap:24px;align-items:center;padding:36px max(24px,calc((100% - 1120px)/2));color:#fff;background:linear-gradient(115deg,#101c31,#143a63)}
+h1,h2,p{margin-top:0}h1{margin-bottom:0;font-size:clamp(1.8rem,4vw,3rem);letter-spacing:-.04em}h2{margin-bottom:8px}.eyebrow{margin-bottom:8px;color:#639fe3;font-size:.75rem;font-weight:800;letter-spacing:.12em}
+.demo{padding:7px 10px;border:1px solid #6c9dd1;border-radius:99px;font-size:.72rem;font-weight:700;letter-spacing:.08em;white-space:nowrap}
+main{max-width:1120px;margin:auto;padding:28px 24px 56px}.intro{max-width:850px;color:var(--muted);font-size:1.05rem}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:26px 0}
+.cards article,.panel{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 10px 26px rgba(24,44,79,.05)}.cards article{padding:20px}.cards span,.cards small{display:block;color:var(--muted)}.cards strong{display:block;margin:7px 0 5px;font-size:1.6rem;letter-spacing:-.04em}
+.panel{padding:24px;margin-top:18px}.split{display:grid;grid-template-columns:1.5fr .8fr;gap:36px}.split aside{padding-left:28px;border-left:1px solid var(--line)}.split li{margin:9px 0;color:var(--muted)}
+.life{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:18px}.life div{padding:14px 12px;border:1px solid var(--line);border-radius:12px;background:#fff}.life b{display:block;font-size:.82rem;margin-bottom:4px}.life span{color:var(--muted);font-size:.78rem}
+.chart{display:flex;height:220px;gap:14px;align-items:end;padding:24px 4px 0;border-bottom:1px solid var(--line)}.bar-wrap{flex:1;display:flex;min-width:38px;height:100%;flex-direction:column;align-items:center;justify-content:end;gap:7px;color:var(--muted);font-size:.75rem}.bar{width:min(38px,72%);min-height:8px;background:linear-gradient(#1b82e4,#0969da);border-radius:7px 7px 0 0}.value{font-size:.66rem;color:#4d5d74;transform:rotate(-90deg);white-space:nowrap;margin-bottom:18px}
+table{width:100%;border-collapse:collapse;text-align:left;margin-top:12px}th{color:var(--muted);font-size:.76rem;letter-spacing:.06em;text-transform:uppercase}th,td{padding:13px 9px;border-bottom:1px solid #edf1f6}.tag{display:inline-block;padding:3px 8px;border-radius:99px;font-size:.76rem;font-weight:700}.available{color:var(--green);background:#e6f5ef}.rent{color:var(--accent);background:#e8f2ff}.service{color:var(--orange);background:#fff0de}
+footer{padding:22px;color:#92a3ba;background:#101c31;text-align:center;font-size:.84rem}
+@media(max-width:760px){.topbar{align-items:flex-start;flex-direction:column}.cards{grid-template-columns:repeat(2,1fr)}.split{grid-template-columns:1fr}.split aside{padding:18px 0 0;border-top:1px solid var(--line);border-left:0}.life{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<header class="topbar"><div><p class="eyebrow">PYTHON · SQLITE · OPERACJE</p><h1>Fleet Ops Desk</h1></div><span class="demo">DANE DEMONSTRACYJNE</span></header>
+<main>
+<section class="intro"><p>Demonstracyjne narzędzie do kontroli floty, kosztów, najmu i leasingu. Projekt rozwijany na bazie doświadczenia operacyjnego i wcześniejszych ewidencji prowadzonych w arkuszach kalkulacyjnych. Bez rzeczywistych danych firmowych, kierowców i pojazdów.</p></section>
+<section class="cards">
+<article><span>Pojazdy</span><strong>18</strong><small>3 kontenery z windą</small></article>
+<article><span>Koszty</span><strong>504</strong><small>rekordy demonstracyjne</small></article>
+<article><span>Najem</span><strong>21 umów</strong><small>aktywne i zamknięte</small></article>
+<article><span>Leasing</span><strong>11 umów</strong><small>kontrola finansowania</small></article>
+</section>
+<section class="panel"><p class="eyebrow">CYKL ŻYCIA POJAZDU</p><h2>Od wprowadzenia do rozliczenia</h2>
+<div class="life">
+<div><b>1. Ewidencja</b><span>dane, status, finansowanie</span></div>
+<div><b>2. Wydanie</b><span>użytkownik / najem</span></div>
+<div><b>3. Eksploatacja</b><span>paliwo, przebieg, koszty</span></div>
+<div><b>4. Serwis</b><span>naprawy, opony, ubezpieczenia</span></div>
+<div><b>5. Analiza</b><span>odchylenia i przestoje</span></div>
+<div><b>6. Zwrot</b><span>zamknięcie i rozliczenie</span></div>
+</div></section>
+<section class="panel split"><div><p class="eyebrow">KOSZTY 2018–2024</p><h2>Trend kosztów</h2><div class="chart">
+<div class="bar-wrap"><span class="value">226 tys.</span><div class="bar" style="height:73%"></div><span>2018</span></div>
+<div class="bar-wrap"><span class="value">238 tys.</span><div class="bar" style="height:77%"></div><span>2019</span></div>
+<div class="bar-wrap"><span class="value">251 tys.</span><div class="bar" style="height:81%"></div><span>2020</span></div>
+<div class="bar-wrap"><span class="value">226 tys.</span><div class="bar" style="height:73%"></div><span>2021</span></div>
+<div class="bar-wrap"><span class="value">238 tys.</span><div class="bar" style="height:77%"></div><span>2022</span></div>
+<div class="bar-wrap"><span class="value">251 tys.</span><div class="bar" style="height:81%"></div><span>2023</span></div>
+<div class="bar-wrap"><span class="value">226 tys.</span><div class="bar" style="height:73%"></div><span>2024</span></div>
+</div></div>
+<aside><h2>System może wspierać</h2><ul><li>status i dostępność pojazdów</li><li>kontrolę serwisów i przestojów</li><li>koszty eksploatacji</li><li>najem i leasing</li><li>szybkie wykrywanie odchyleń kosztowych</li></ul></aside></section>
+<section class="panel"><p class="eyebrow">REJESTR</p><h2>Pojazdy demonstracyjne</h2>
+<table><thead><tr><th>Kod</th><th>Typ</th><th>Status</th><th>Paliwo</th><th>Koszt roczny</th></tr></thead><tbody>
+<tr><td>FL-01</td><td>Kontener</td><td><span class="tag available">Dostępny</span></td><td>Diesel</td><td>24 400 zł</td></tr>
+<tr><td>FL-05</td><td>Kombi</td><td><span class="tag rent">W najmie</span></td><td>Hybryda</td><td>18 500 zł</td></tr>
+<tr><td>FL-12</td><td>Kombi</td><td><span class="tag service">Serwis</span></td><td>Benzyna</td><td>16 500 zł</td></tr>
+<tr><td>FL-18</td><td>Kombi</td><td><span class="tag rent">W najmie</span></td><td>Diesel</td><td>17 600 zł</td></tr>
+</tbody></table></section>
+</main><footer>Fleet Ops Desk · portfolio operacyjne · dane demonstracyjne</footer>
+</body></html>
