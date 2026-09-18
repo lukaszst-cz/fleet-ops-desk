@@ -4,6 +4,8 @@
 
 Projekt powstał na bazie własnego doświadczenia operacyjnego z flotą oraz sposobu prowadzenia ewidencji i zestawień w arkuszach kalkulacyjnych. Repozytorium wykorzystuje wyłącznie dane testowe i anonimowe — nie zawiera rzeczywistych danych firmowych, kierowców, klientów, pojazdów ani dokumentów.
 
+![Podgląd Fleet Ops Desk](docs/fleet-ops-preview.svg)
+
 ## Co pokazuje projekt
 
 - ewidencję 18 pojazdów demonstracyjnych,
@@ -28,6 +30,15 @@ Koncepcja projektu odnosi się do praktycznego cyklu życia pojazdu w firmie:
 6. **zwrot / zakończenie najmu lub leasingu** — zamknięcie okresu użytkowania i rozliczenie danych.
 
 Taki system może wspierać pracę operacyjną poprzez zebranie w jednym miejscu informacji, które w praktyce często są rozproszone między arkuszami Excel, dokumentami, wiadomościami i systemami zewnętrznymi. Celem projektu nie jest zastępowanie komercyjnego systemu flotowego, lecz pokazanie sposobu myślenia o danych, procesach i kontroli operacyjnej.
+
+## Podgląd w przeglądarce
+
+W katalogu `docs/` znajduje się statyczny, bezpieczny podgląd interfejsu przygotowany do publikacji przez GitHub Pages:
+
+- `docs/index.html` — prezentacja dashboardu i cyklu życia pojazdu,
+- `docs/fleet-ops-preview.svg` — szybki podgląd widoczny bez uruchamiania aplikacji.
+
+Statyczny podgląd nie korzysta z danych produkcyjnych ani z bazy użytkownika. Właściwa aplikacja Python + SQLite pozostaje w `app.py`.
 
 ## Dane demonstracyjne
 
