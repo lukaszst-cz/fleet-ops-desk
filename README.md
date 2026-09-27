@@ -1,5 +1,7 @@
 # Fleet Ops Desk
 
+[![Test](https://github.com/lukaszst-cz/fleet-ops-desk/actions/workflows/test.yml/badge.svg)](https://github.com/lukaszst-cz/fleet-ops-desk/actions/workflows/test.yml)
+
 **Fleet Ops Desk** to demonstracyjne narzędzie do porządkowania i analizy danych flotowych, przygotowane w Pythonie i SQLite.
 
 Projekt powstał na bazie własnego doświadczenia operacyjnego z flotą oraz sposobu prowadzenia ewidencji i zestawień w arkuszach kalkulacyjnych. Repozytorium wykorzystuje wyłącznie dane testowe i anonimowe — nie zawiera rzeczywistych danych firmowych, kierowców, klientów, pojazdów ani dokumentów.
