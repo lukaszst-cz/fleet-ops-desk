@@ -233,6 +233,12 @@ def application(environ, start_response):
     path = environ.get("PATH_INFO", "/")
     if path == "/":
         return response(start_response, "200 OK", render_dashboard().encode(), "text/html; charset=utf-8")
+    if path == "/api/health":
+        content = json.dumps(
+            {"status": "ok", "service": "fleet-ops-desk", "data_class": "synthetic"},
+            ensure_ascii=False,
+        ).encode()
+        return response(start_response, "200 OK", content, "application/json; charset=utf-8")
     if path == "/api/dashboard":
         content = json.dumps(dashboard_data(), ensure_ascii=False).encode()
         return response(start_response, "200 OK", content, "application/json; charset=utf-8")
