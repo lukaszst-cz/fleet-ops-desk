@@ -8,6 +8,8 @@ Projekt powstał na bazie własnego doświadczenia operacyjnego z flotą oraz sp
 
 ![Podgląd Fleet Ops Desk](docs/fleet-ops-preview.svg)
 
+[Otwórz statyczne demo](https://lukaszst-cz.github.io/fleet-ops-desk/)
+
 ## Co pokazuje projekt
 
 - ewidencję 18 pojazdów demonstracyjnych,
@@ -65,6 +67,16 @@ Po uruchomieniu aplikacja jest dostępna lokalnie pod adresem:
 ```text
 http://127.0.0.1:8000
 ```
+
+## API demonstracyjne
+
+Po uruchomieniu aplikacji lokalnej dostępne są:
+- `GET /api/health` — stan aplikacji i klasa danych;
+- `GET /api/dashboard` — zagregowane dane floty, najmu, leasingu i trendu kosztów;
+- `GET /api/vehicles` — rejestr pojazdów;
+- `GET /api/vehicles?q=Van&status=Dostępny` — filtrowanie rejestru.
+
+API korzysta wyłącznie z lokalnej bazy demonstracyjnej SQLite.
 
 ## Szybki test projektu
 
