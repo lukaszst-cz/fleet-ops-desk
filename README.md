@@ -111,3 +111,13 @@ Projekt pokazuje połączenie praktyki flotowej z podejściem cyfrowym: ewidencj
 ## Portfolio
 
 Projekt jest częścią głównego [portfolio operacyjnego](https://github.com/lukaszst-cz/operations-office-portfolio).
+
+---
+
+## ☕ Wsparcie / Support
+
+Jeśli ten projekt Ci się podoba lub jest dla Ciebie przydatny, możesz dobrowolnie wesprzeć jego dalszy rozwój.  
+If you like this project or find it useful, you can support its further development.
+
+**[☕ Postaw Naleśnikowi++ kawę / Buy Me a Coffee](https://buymeacoffee.com/nalesnik_plus_plus)**
+
